@@ -30,13 +30,13 @@ export default function Home() {
 
         <div className='mt-10 border-2 p-8 flex justify-between items-center rounded-sm'>
           <div className='w-64 h-64 text-black rounded-sm'>
-            <img width={64} height={64} src={firstPokemon.data?.sprites.front_default} className="w-full" />
+            <Image alt='pokemon 1' width={64} height={64} src={firstPokemon.data?.sprites.front_default!} className="w-full" />
             <h2 className="px-6 mt-[-2rem] text-center capitalize text-purple-500">{firstPokemon.data?.name}</h2>
             <button className='self-center bg-purple-200 w-full rounded-md'>Round</button>
           </div>
           <div className='px-8'>VS</div>
           <div className="w-64 h-64 text-black rounded-sm">
-            <img width={64} height={64} src={secondPokemon.data?.sprites.front_default} className="w-full" />
+            <Image alt='pokemon 2' width={64} height={64} src={secondPokemon.data?.sprites.front_default!} className="w-full" />
             <h2 className="px-6 mt-[-2rem] text-center capitalize text-purple-500">{secondPokemon.data?.name}</h2>
             <button className='self-center bg-purple-200 w-full rounded-md'>Round</button>
           </div>
