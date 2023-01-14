@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import { trpc } from '@/utils/trpc'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+
+
   return (
     <>
       <Head>
@@ -14,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='h-screen w-screen flex flex-col justify-center items-center'>
-        <div className='text-2xl text-center'>Which PokeMon is Rounder?</div>
+        <div className='text-2xl text-center'>Which Pokemon is Rounder?</div>
 
         <div className='mt-10 border-2 p-8 flex justify-between items-center'>
           <div className='bg-purple-300 w-20 h-20' />
