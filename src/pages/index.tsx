@@ -1,13 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import { trpc } from '@/utils/trpc'
-
-const inter = Inter({ subsets: ['latin'] })
+import { getOptionForVote } from '@/utils/getRandomPokemon'
 
 export default function Home() {
 
-
+  const [firstId, secondId] = getOptionForVote();
 
   return (
     <>
@@ -21,9 +19,9 @@ export default function Home() {
         <div className='text-2xl text-center'>Which Pokemon is Rounder?</div>
 
         <div className='mt-10 border-2 p-8 flex justify-between items-center'>
-          <div className='bg-purple-300 w-20 h-20' />
+          <div className='bg-purple-300 w-20 h-20 text-black'>{firstId}</div>
           <div className='px-8'>VS</div>
-          <div className='bg-purple-300 w-20 h-20' />
+          <div className='bg-purple-300 w-20 h-20 text-black'>{secondId}</div>
         </div>
       </main>
     </>
